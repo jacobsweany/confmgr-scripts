@@ -1,3 +1,7 @@
+# This script will search Windows event data for event ID 41015, which is triggered when a new computer is deployed in MDT.
+# It uses a regex to get the computer name after parsing that data.
+# It will then find the computer object in Active Directory corresponding to that computer name, then move it to the specified OU.
+
 
 # Import AD session
 $session = New-PSSession -ComputerName LON-DC1
